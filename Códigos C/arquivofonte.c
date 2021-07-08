@@ -1,10 +1,10 @@
 /**/
-# include <stdio.h> // Inclus„o da biblioteca
+# include <stdio.h> // Inclus√£o da biblioteca
 
-int main () // FunÁ„o principal
+int main () // Fun√ß√£o principal
 {
 	
-	system ("PAUSE"); // Pausar o programa para visualizaÁ„o de resultado
+	system ("PAUSE"); // Pausar o programa para visualiza√ß√£o de resultado
 	return 0; // Retornar 0
 }
 //NOME: DAVI KALEL ANDRADE TEIXEIRA
