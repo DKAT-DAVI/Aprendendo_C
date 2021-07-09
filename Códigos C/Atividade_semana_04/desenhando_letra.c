@@ -1,3 +1,4 @@
+/*Questão 05 - Fazer um programa que gere a letra inicial do seu nome como saída.*/
 #include <stdio.h>
 
 int main ()
@@ -16,3 +17,4 @@ int main ()
     system("pause");
     return 0;
 }
+//NOME: DAVI KALEL ANDRADE TEIXEIRA
