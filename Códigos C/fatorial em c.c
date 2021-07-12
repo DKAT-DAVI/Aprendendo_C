@@ -5,7 +5,7 @@ int main()	//Função principal
 	//Declaração de variáveis
 	int cont, num;
 	//Entrada de dados
-	printf("\t=-=-=-=-=-=- CALCULO FATORIAL -=-=-=-=-=-=-=\n\n"); //Título
+	printf("\t=-=-=-=-=-=- CALCULO FATORIAL EM C -=-=-=-=-=-=-=\n\n"); //Título
 	//Pede um número para calcular o fatorial
 	printf("\tDigite um numero para calcular o fatorial: "); 
 	scanf("%d", &num);
