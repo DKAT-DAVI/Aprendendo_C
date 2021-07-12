@@ -46,7 +46,7 @@ int main()
 
     printf("=-=-=-=-=-=-=-=-=-=-=-=CADASTRADO=-=-=-=-=-=-=-=-=-=-=-=\n");
 
-    printf("\nNOME: %s\n\nENDEREcO\nRUA: %s\n\nNUMERO: %s\n\nBAIRRO: %s\n\nCEP: %s\n\nESTADO: %s\n\nCELULAR: %s\n\nIDADE: %s\n\n", nome, rua, bairro, num, cep, estado, cel, idade);
+    printf("\nNOME: %s\n\nENDEREcO\nRUA: %s\n\nNUMERO: %s\n\nBAIRRO: %s\n\nCEP: %s\n\nESTADO: %s\n\nCELULAR: %s\n\nIDADE: %s\n\n", nome, rua, num, bairro, cep, estado, cel, idade);
 
     system("PAUSE");
     return 0;
