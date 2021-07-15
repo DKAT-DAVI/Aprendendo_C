@@ -29,7 +29,7 @@ int main()
 {
     float a, b;
     char oper = 'a';
-    int pergunta = 1;
+    char pergunta = 'b';
 
     system("color 1");
 
@@ -41,23 +41,29 @@ int main()
     printf("\t==================================\n");
 
     printf("\n\tCALCULAR OU SAIR? ");
-    scanf("%d", &pergunta);
+    scanf("%s", &pergunta);
     
-    system("cls");
 
-    while(pergunta > 2 || pergunta < 1){
-            printf("\tOPCAO INVALIDA, TENTE NOVAMENTE!");
-            printf("\n\n\t================================\n");
+
+    while(pergunta != '2' && pergunta != '1'){
+            system("cls");
+            system("color 4");
+            printf("\n\tOPCAO INVALIDA, TENTE NOVAMENTE!");
+            printf("\n\n\t==================================\n");
             printf("\t|                                |\n");
             printf("\t|   FAZER CALCULO        ->  1   |\n");
             printf("\t|   SAIR DA CALCULADORA  ->  2   |\n");
             printf("\t|                                |\n");
             printf("\t==================================\n");
             printf("\n\n\tCALCULAR OU SAIR? ");
-            scanf("%d", &pergunta);
+            scanf("%s", &pergunta);
+            system("cls");
     }
 
-    while(pergunta == 1){
+    system("cls");
+    system("color 1");
+
+    while(pergunta == '1'){
 
         printf("\n\t===== CALCULADORA DE 2 NUMEROS =====\n");
         printf("\t|      PARA SOMAR       ->  +      |\n");
@@ -72,10 +78,20 @@ int main()
         printf("\n\tDIGITE A OPERACAO: ");
         scanf("%s", &oper);
         while(oper != '+' && oper != '-' && oper != '*' && oper != '/'){
+            system("color 4");
             printf("\n\tOPERACAO INVALIDA, TENTE NOVAMENTE!");
+            printf("\n\t====================================\n");
+            printf("\t|      PARA SOMAR       ->  +      |\n");
+            printf("\t|      PARA SUBTRAIR    ->  -      |\n");
+            printf("\t|      PARA MULTIPLICAR ->  *      |\n");
+            printf("\t|      PARA DIVIDIR     ->  /      |\n");
+            printf("\t====================================\n\n");
             printf("\n\n\tDIGITE A OPERACAO: ");
             scanf("%s", &oper);
+            system("cls");
         }
+
+        system("color 1");
 
         printf("\n\tDIGITE O SEGUNDO NUMERO: ");
         scanf("%f", &b); 
@@ -102,8 +118,17 @@ int main()
         }
 
         printf("\n\n\tCALCULAR OUTRO NUMERO OU SAIR? ");
-        scanf("%d", &pergunta);
+        scanf("%s", &pergunta);
 
+        while(pergunta != '1' && pergunta != '2'){
+        system("color 4");
+        printf("\tOPCAO INVALIDA, TENTE NOVAMENTE!");
+        printf("\n\tCALCULAR OU SAIR? ");
+        scanf("%s", &pergunta);
+        system("cls");
+        }
+
+        system("color 1");
         system("cls");
     }
     //system("PAUSE");
