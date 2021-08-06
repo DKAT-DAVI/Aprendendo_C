@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <unistd.h>
-
+#include <stdlib.h>
 
 float soma(float x, float y) //Função para somar
 {   
@@ -22,7 +22,7 @@ float mult(float x, float y) //Função para multiplicar
     return 0;
 }
 
-float div(float x, float y) //Função para dividir
+float dividir(float x, float y) //Função para dividir
 {   
     printf("%.1f", x / y);
     return 0;
@@ -129,7 +129,7 @@ int main() //Função principal
         else if(oper == '/') //Se digitar '/' acionar a função de divisão
         {
             printf("\n\tRESULTADO: ");
-            div(a,b);
+            dividir(a,b);
         }
 
         // O usuário decidir se quer calcular outro número ou sair
