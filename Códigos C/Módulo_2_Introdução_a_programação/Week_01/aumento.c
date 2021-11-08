@@ -15,51 +15,48 @@ int main()
     int flat;
     
     printf("=========================\n");
-    printf("| PLANO DE  |   DIGITE  |\n");
-    printf("| TRABALHO  |           |\n");
+    printf("| WORK PLAN |  TYPE IT  |\n");
     printf("|     A     |     1     |\n");
     printf("|     B     |     2     |\n");
     printf("|     C     |     3     |\n");
     printf("=========================\n");    
-    printf("Digite seu plano de trabalho: ");
+    printf("Enter your work plan: ");
     scanf("%d", &flat);
 
      while (flat != 1 && flat != 2 && flat != 3)
     {
-        printf("\nDigite apenas planos de trabalho disponiveis!!\n\n");
+        printf("\nType only available work plans!\n\n");
         printf("=========================\n");
-        printf("| PLANO DE  |   DIGITE  |\n");
-        printf("| TRABALHO  |           |\n");
+        printf("| WORK PLAN |  TYPE IT  |\n");
         printf("|     A     |     1     |\n");
         printf("|     B     |     2     |\n");
         printf("|     C     |     3     |\n");
         printf("=========================\n");    
-        printf("Digite seu plano de trabalho: ");
+        printf("Enter your work plan: ");
         scanf("%d", &flat);
 
     }
 
-    printf("\nDigite seu salario: ");
+    printf("\nEnter your salary: ");
     scanf("%f", &salary);
     
-    printf("\nPlano: %d", flat);
+    printf("\nPlan: %d", flat);
 
-    printf("\nSalario antigo R$%.2f", salary);
+    printf("\nOld salary R$%.2f", salary);
 
     switch (flat)
     {
     case 1:
-        printf("\nNovo salario R$%.2f\n\n", salary + (salary / 100) * 10);
+        printf("\nNew salary R$%.2f\n\n", salary + (salary / 100) * 10);
         break;
     case 2:
-        printf("\nNovo salario R$%.2f\n\n", salary + (salary / 100) * 15);        
+        printf("\nNew salary R$%.2f\n\n", salary + (salary / 100) * 15);        
         break;
     case 3:
-        printf("\nNovo salario R$%.2f\n\n", salary + (salary / 100) * 20);
+        printf("\nNew salary R$%.2f\n\n", salary + (salary / 100) * 20);
         break;
     }
-
-    system ("PAUSE");
+    
     return 0;
 }
 
