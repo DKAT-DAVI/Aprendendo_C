@@ -18,8 +18,20 @@ struct dados //Estrutura para receber os dados
 
 int main(void) //Iniciando a função principal
 {
+    char n[3] = "s";
     struct dados funcionario; //Declaração da variável tipo struct dados
     
+    while (n == "S" && n == "s")
+    {
+    
+    printf("Preencher formulário?|S/N| ");
+    gets(n);
+
+    if (n == "N" && n == "n")
+    {
+        break;
+    }
+
     printf("\n==== FORMULARIO DO FUNCIONARIO ====\n");
     
     printf("NOME: ");
@@ -58,6 +70,7 @@ int main(void) //Iniciando a função principal
     printf("SETEMBRO: R$%.2f\n", funcionario.salarios[1]);
     printf("OUTUBRO: R$%.2f\n", funcionario.salarios[2]);
     printf("====================================\n\n");
+    }
 
     return 0;
 }
