@@ -6,25 +6,18 @@
 
 void title() //Declarando função PARA O CABEÇALHO
 {
-    Sleep(800); //Usando função Sleep() para fazer pequenas pausas no programa
+    system("cls");
+    Sleep(200); //Usando função Sleep() para fazer pequenas pausas no programa
     printf("\n======= INTRODUCAO A PROGRAMACAO ======="); //Cabeçalho
-    Sleep(800);
     printf("\n|         ATIVIDADE AVALIATIVA         |");
-    Sleep(800);
     printf("\n|                                      |");
-    Sleep(800);
     printf("\n|  Aluno: Davi Kalel Andrade Teixeira  |");
-    Sleep(800);
     printf("\n|     Turma: 1o ano - Informatica      |");
-    Sleep(800);
     printf("\n|           Data: 03/12/2021           |");
-    Sleep(800);
     printf("\n|          Escola: IFNMG - MOC         |");
-    Sleep(800);
     printf("\n|                                      |");
-    Sleep(800);
     printf("\n========================================\n");
-    Sleep(800);
+    Sleep(1000);
 
     return 0; 
 }
@@ -86,15 +79,26 @@ void questao_1() //Função questão 1
     //Enunciado da questão
     printf("\nFaca um Programa que mostre a mensagem 'Alo mundo' na tela.");
     Sleep(700);
-    //Input do código
-    printf("\nINPUT ->\n");
-    Sleep(700);
-    printf("printf('Alo Mundo');\n");
-    Sleep(700);
     //Print do código na tela
-    printf("\nOUTPUT ->");
-    Sleep(700);
-    printf("\nAlo Mundo");
+    printf("\n\nAlo Mundo");
+    return 0;
+}
+
+void questao_2() //Função questão 2
+{
+    int celsius, fahrenheit; //Variáveis para receber as temperaturas
+
+    printf("\nFaca um Programa que peca a temperatura em graus Celsius,\ntransforme e mostre em graus Fahrenheit.");//Enunciado da questão
+    Sleep(800);
+
+    printf("\n\nInsira uma temperatura em graus Celsius: ");
+    scanf("%d", &celsius); //Lendo temperatura em Celsius
+    Sleep(800);
+
+    fahrenheit = (celsius*1.8)+32; //Convertendo Celsius para Fahrenheit
+
+    printf("%d graus Celsius e igual a %d graus Fahrenheit.\n\n", celsius, fahrenheit); //Exibindo mensagem na tela
+    
     return 0;
 }
 
@@ -111,21 +115,68 @@ int main(void) //Iniciando a função principal
 
     //Loop de erro para quando o usuário digitar uma questão indisponível
     while (escolha<1 || escolha>10){
-        printf("\n\nOPCAO INVALIDA!");
+        printf("\n\nescolha INVALIDA!");
         printf("\nDISPONIVEIS APENAS QUESTOES ENTRE 1 E 10");
         printf("\n\nDIGITE O NUMERO DA QUESTAO PARA EXECUTAR: ");
         scanf("%d", &escolha);
     }
-
-    system ("cls"); //Limpar a tela para executar a questão
     
-    //switch para executar as questões
-    switch (escolha)
+    int decidir=escolha; //Variável para decidir a execução dentro do switch
+
+    title();
+    
+    //Loop para executar as questões
+    while (decidir != 0)
     {
-    case 1:
-        questao_1();
-        break;
+        switch (escolha)
+        {
+        case 1:
+            questao_1();
+            Sleep(3000);
+            break;
+        case 2:
+            questao_2();
+            Sleep(3000);
+            break;
+        }
+        //Menu de opções após a execução da questão
+        printf("\n\n=================================================");
+        printf("\n|      Digite 0 para FINALIZAR o programa.      |");
+        printf("\n|       Digite 1 para REPETIR a questao.        |");
+        printf("\n| Digite 2 para VOLTAR para o menu de questoes. |");
+        printf("\n=================================================");
+        printf("\nDigite sua escolha: ");
+        scanf("%d", &decidir);
+        //Loop de erro para quando o usuário digitar uma opção indisponível
+        while (decidir<0 || decidir>2){
+            printf("\n\nescolha INVALIDA!");
+            printf("\nDISPONIVEIS AS OPCOES DISPONIVEIS NO QUADRO ACIMA");
+            printf("\n\nDigite sua escolha: ");
+            scanf("%d", &decidir);
+        }
+        if (decidir == 2){ //Exibir o menu de questões novamente
+            title(); //Chamando função do cabeçalho
+
+            escolher(); //Chamando função de exibir questões
+
+            printf("\n\nDIGITE O NUMERO DA QUESTAO PARA EXECUTAR: ");
+            scanf("%d", &escolha); //Escolhendo a questão
+
+            //Loop de erro para quando o usuário digitar uma questão indisponível
+            while (escolha<1 || escolha>10){
+                printf("\n\nescolha INVALIDA!");
+                printf("\nDISPONIVEIS APENAS QUESTOES ENTRE 1 E 10");
+                printf("\n\nDIGITE O NUMERO DA QUESTAO PARA EXECUTAR: ");
+                scanf("%d", &escolha);
+            }
+            title(); //Chamando função title
+        }
     }
+
+    system("cls");
+    printf("\nCreated by DKAT");
+    Sleep(3000);
+    system("cls");
 
     return 0; //Retornando 0
 }
