@@ -1,2 +1,2 @@
 # Learning_C
- My códigos de aprendizagem de linguagem C, curso de informática IFNMG e outros.
+ Introdução a Programação usando Linguagem C <br> Curso de Informática IFNMG.
